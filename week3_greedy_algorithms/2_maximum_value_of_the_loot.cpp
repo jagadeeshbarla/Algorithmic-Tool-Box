@@ -12,6 +12,9 @@ bool myfun(struct node a,struct node b)
 }
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
     long long int n,i,value,weight,max_cap;
     double ans=0;
     cin>>n>>max_cap;
