@@ -14,16 +14,16 @@ vector<int> optimal_points(vector<Segment>& segments)
 	int point = -1;
 	int j = 0;
 	for (size_t i = 0; i < segments.size(); ++i)
-  {
+  	{
 		if (not covered[i])
-    {
+    		{
 			point = segments[i].end;
 			points.push_back(point);
 			covered[i] = true;
 			j = i + 1;
 			while (j < segments.size() and
 				   (segments[j].start <= point and segments[j].end >= point))
-      {
+      			{
 				covered[j] = true;
 				j++;
 			}
